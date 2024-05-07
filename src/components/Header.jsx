@@ -83,7 +83,7 @@ const Header = () => {
   // logout function
   const logout = () => {
     localStorage.clear("users");
-    navigate("https://toy-dazzle-meraeugenes-projects.vercel.app/");
+    navigate("https://toy-dazzle.vercel.app/");
     setLoading(false);
   };
 
