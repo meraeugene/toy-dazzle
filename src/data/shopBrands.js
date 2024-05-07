@@ -1,50 +1,50 @@
 export const shopBrands = [
   {
     id: 1,
-    image: "/images/b1.png",
+    image: "/images/brands/1.webp",
   },
   {
     id: 2,
-    image: "/images/b2.png",
+    image: "/images/brands/2.webp",
   },
   {
     id: 3,
-    image: "/images/b3.png",
+    image: "/images/brands/3.webp",
   },
   {
     id: 4,
-    image: "/images/b4.png",
+    image: "/images/brands/4.webp",
   },
   {
     id: 5,
-    image: "/images/b5.png",
+    image: "/images/brands/5.webp",
   },
   {
     id: 6,
-    image: "/images/b6.png",
+    image: "/images/brands/6.webp",
   },
   {
     id: 7,
-    image: "/images/b7.png",
+    image: "/images/brands/7.webp",
   },
   {
     id: 8,
-    image: "/images/b8.png",
+    image: "/images/brands/8.webp",
   },
   {
     id: 9,
-    image: "/images/b9.png",
+    image: "/images/brands/9.webp",
   },
   {
     id: 10,
-    image: "/images/b10.png",
+    image: "/images/brands/10.webp",
   },
   {
     id: 11,
-    image: "/images/b11.png",
+    image: "/images/brands/11.webp",
   },
   {
     id: 12,
-    image: "/images/b12.png",
+    image: "/images/brands/12.webp",
   },
 ];

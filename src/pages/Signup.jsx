@@ -57,7 +57,12 @@ const Signup = () => {
     <main className="bg-[#FFD72D] lg:p-16 lg:py-16 xl:px-40 ">
       <div className="flex items-center">
         <div className="basis-1/2">
-          <img src="/images/pool.png" alt="" width="800" />
+          <img
+            src="/images/signup/pool.webp"
+            alt=""
+            width="800"
+            loading="lazy"
+          />
         </div>
         <div className="content__container py-10 pb-12 h-full  basis-[50%] bg-white rounded-3xl">
           <form

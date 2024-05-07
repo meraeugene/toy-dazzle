@@ -64,7 +64,12 @@ const Cart = () => {
                 className="flex items-center gap-8 bg-white rounded-2xl px-6 py-2 "
               >
                 <div className="img__container basis-full  2xl:basis-[60%] ">
-                  <img src={item.image} alt={item.name} className="" />
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className=""
+                    loading="lazy"
+                  />
                 </div>
                 <div className="content basis-full  ">
                   <h1 className="fredoka 2xl:text-2xl text-xl  font-semibold">
@@ -237,7 +242,7 @@ const Cart = () => {
         </div>
       ) : (
         <div className="h-[60vh] flex flex-col items-center justify-center">
-          <img src="/images/emptycart.png" alt="" />
+          <img src="/images/icons/emptycart.webp" alt="" loading="lazy" />
           <h1 className="outfit text-3xl mt-6 font-semibold">
             Your Cart is Empty
           </h1>

@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    image: "/images/boys1.png",
+    image: "/images/products/boys/boys1.webp",
     name: "Jujutsu Kaisen Satoru Gojo Action Figure",
     price: 1439,
     category: "Boys",
@@ -11,7 +11,7 @@ export const products = [
   },
   {
     id: 2,
-    image: "/images/boys2.png",
+    image: "/images/products/boys/boys2.webp",
     name: "Transformers Rise Of The Beasts Cheetor Action Figure",
     price: 1529.1,
     category: "Boys",
@@ -21,7 +21,7 @@ export const products = [
   },
   {
     id: 3,
-    image: "/images/boys3.png",
+    image: "/images/products/boys/boys3.webp",
     name: "Dickie Toys Garbage Truck Vehicle",
     price: 2299,
     category: "Boys",
@@ -31,7 +31,7 @@ export const products = [
   },
   {
     id: 4,
-    image: "/images/boys4.png",
+    image: "/images/products/boys/boys4.webp",
     name: "Fast Shots Foam Launcher 40 Foam Darts and 1 Barril",
     price: 1529.1,
     category: "Boys",
@@ -41,7 +41,7 @@ export const products = [
   },
   {
     id: 5,
-    image: "/images/boys5.png",
+    image: "/images/products/boys/boys5.webp",
     name: "Nerf Rival Fate XXII 100",
     price: 1034.1,
     category: "Boys",
@@ -51,7 +51,7 @@ export const products = [
   },
   {
     id: 6,
-    image: "/images/boys6.png",
+    image: "/images/products/boys/boys6.webp",
     name: "DC Comics Batman Giant Series 12 inch Action Figure",
     price: 1299,
     category: "Boys",
@@ -61,7 +61,7 @@ export const products = [
   },
   {
     id: 7,
-    image: "/images/boys7.png",
+    image: "/images/products/boys/boys7.webp",
     name: "Fast Shots Alien-Gen Alien Angler 8 Foam Darts",
     price: 512.1,
     category: "Boys",
@@ -71,7 +71,7 @@ export const products = [
   },
   {
     id: 8,
-    image: "/images/boys8.png",
+    image: "/images/products/boys/boys8.webp",
     name: "Hot Wheels Monster Trucks Oversized Big Foot Vehicle",
     price: 1499,
     category: "Boys",
@@ -81,7 +81,7 @@ export const products = [
   },
   {
     id: 9,
-    image: "/images/boys9.png",
+    image: "/images/products/boys/boys9.webp",
     name: "Hot Wheels City Tunnel Twist Car Wash",
     price: 2499,
     category: "Boys",
@@ -91,7 +91,7 @@ export const products = [
   },
   {
     id: 10,
-    image: "/images/boys10.png",
+    image: "/images/products/boys/boys10.webp",
     name: "DC Comics Batman Giant Series King Shark 12 inch Batman Giant",
     price: 1299,
     category: "Boys",
@@ -101,7 +101,7 @@ export const products = [
   },
   {
     id: 11,
-    image: "/images/boys11.png",
+    image: "/images/products/boys/boys11.webp",
     name: "Nerf Ink Buzz Transformers More Than Meets The Eye",
     price: 899.1,
     category: "Boys",
@@ -111,7 +111,7 @@ export const products = [
   },
   {
     id: 12,
-    image: "/images/boys12.png",
+    image: "/images/products/boys/boys12.webp",
     name: "Jujutsu Kaisen Yuji Itadori Action Figure",
     price: 1439,
     category: "Boys",
@@ -121,7 +121,7 @@ export const products = [
   },
   {
     id: 13,
-    image: "/images/bs1.png",
+    image: "/images/best-sellers/bs1.webp",
     name: "Intex Mandarin Swim Center Inflatable Family Pool",
     price: 1600,
     desciption:
@@ -131,7 +131,7 @@ export const products = [
   },
   {
     id: 14,
-    image: "/images/bs2.png",
+    image: "/images/best-sellers/bs2.webp",
     name: "Dream Machine Dark Blue and White 2 Nozzle Water Blaster",
     price: 399,
     desciption:
@@ -141,7 +141,7 @@ export const products = [
   },
   {
     id: 15,
-    image: "/images/bs3.png",
+    image: "/images/best-sellers/bs3.webp",
     name: "Jungle Adventure Inflatable Kid Play Center Pool",
     price: 5499,
     desciption:
@@ -151,7 +151,7 @@ export const products = [
   },
   {
     id: 16,
-    image: "/images/bs4.png",
+    image: "/images/best-sellers/bs4.webp",
     name: "Red Scooter Inflatable Pool Ride-On",
     price: 300,
     desciption:
@@ -161,7 +161,7 @@ export const products = [
   },
   {
     id: 17,
-    image: "/images/na1.png",
+    image: "/images/new-arrivals/na1.webp",
     name: "Intex Mandarin Swim Center Inflatable Family Pool",
     price: 249.75,
     desciption:
@@ -171,7 +171,7 @@ export const products = [
   },
   {
     id: 18,
-    image: "/images/na2.png",
+    image: "/images/new-arrivals/na2.webp",
     name: "Chillafish ItsiBitsi Blocks 4-Wheel First Ride-On Training Bike",
     price: 1199,
     desciption:
@@ -181,7 +181,7 @@ export const products = [
   },
   {
     id: 19,
-    image: "/images/na3.png",
+    image: "/images/new-arrivals/na3.webp",
     name: "Transformers Rise Of The Beasts Rhinox Action Figure",
     price: 1699,
     desciption:
@@ -191,7 +191,7 @@ export const products = [
   },
   {
     id: 20,
-    image: "/images/na4.png",
+    image: "/images/new-arrivals/na4.webp",
     name: "Globber Master Teal 3-Wheel Electronic Scooter",
     price: 23499.75,
     desciption:
@@ -205,6 +205,6 @@ export const categoriesBanner = [
   {
     id: 1,
     category: "Boys",
-    image: "/images/boysbanner.png",
+    image: "/images/products/boys/boysbanner.webp",
   },
 ];

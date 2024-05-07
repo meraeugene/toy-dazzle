@@ -3,15 +3,15 @@ import React from "react";
 const vouchers = [
   {
     id: 1122,
-    image: "/images/voucher1.png",
+    image: "/images/vouchers/1.webp",
   },
   {
     id: 2131,
-    image: "/images/voucher2.png",
+    image: "/images/vouchers/2.webp",
   },
   {
     id: 3123,
-    image: "/images/voucher3.png",
+    image: "/images/vouchers/3.webp",
   },
 ];
 
@@ -24,7 +24,12 @@ const Voucher = () => {
       <div className="flex items-center justify-between lg:gap-6">
         {vouchers.map((voucher) => (
           <div key={voucher.id}>
-            <img src={voucher.image} alt="" />
+            <img
+              src={voucher.image}
+              alt=""
+              className="object-cover "
+              loading="lazy"
+            />
           </div>
         ))}
       </div>

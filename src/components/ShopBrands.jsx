@@ -10,7 +10,7 @@ const ShopBrands = () => {
       <div className="grid grid-cols-6  gap-4">
         {shopBrands.map((brand) => (
           <div key={brand.id}>
-            <img src={brand.image} alt="" className="w-full" />
+            <img src={brand.image} alt="" className="w-full" loading="lazy" />
           </div>
         ))}
       </div>

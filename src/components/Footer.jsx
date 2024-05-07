@@ -35,19 +35,39 @@ const Footer = () => {
           </h1>
           <ul className="flex gap-4">
             <li>
-              <img src="/images/fb.png" alt="" width="40" />
+              <img
+                src="/images/socials/fb.webp"
+                alt=""
+                width="40"
+                loading="lazy"
+              />
             </li>
             <li>
-              <img src="/images/ig.png" alt="" width="40" />
+              <img
+                src="/images/socials/ig.webp"
+                alt=""
+                width="40"
+                loading="lazy"
+              />
             </li>
             <li>
-              <img src="/images/twitter.png" alt="" width="40" />
+              <img
+                src="/images/socials/twitter.webp"
+                alt=""
+                width="40"
+                loading="lazy"
+              />
             </li>
             <li>
-              <img src="/images/pinterest.png" alt="" width="40" />
+              <img
+                src="/images/socials/pinterest.webp"
+                alt=""
+                width="40"
+                loading="lazy"
+              />
             </li>
             <li>
-              <img src="/images/yt.png" alt="" width="40" />
+              <img src="/images/yt.png" alt="" width="40" loading="lazy" />
             </li>
           </ul>
         </div>

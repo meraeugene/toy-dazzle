@@ -9,6 +9,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, fireDB } from "../firebase";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { useSelector } from "react-redux";
+import { RiShoppingCartLine } from "react-icons/ri";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const Header = () => {
   const [loginNav, setLoginNav] = useState(false);
@@ -94,7 +96,12 @@ const Header = () => {
     <div className="sticky top-0 w-full z-30 ">
       <div className=" nav__container bg-[#007FFF] flex justify-between items-center 2xl:px-40 py-1 lg:px-16 ">
         <Link to="/" className="logo__container">
-          <img src="/images/logo.png" alt="" width="150" />
+          <img
+            src="/images/icons/logo.webp"
+            alt=""
+            width="150"
+            loading="lazy"
+          />
         </Link>
         <div className="search__container w-[500px] relative">
           <form className="flex items-center h-[40px]">
@@ -106,7 +113,7 @@ const Header = () => {
               value={searchQuery}
             />
             <button className="h-full bg-[#FA6A02]  w-[45px] flex items-center justify-center">
-              <img src="/images/search.png" alt="" width="20" />
+              <CiSearch size={22} color="white" />
             </button>
           </form>
           {searchQuery && (
@@ -145,9 +152,10 @@ const Header = () => {
             to="/cart"
             className="relative"
           >
-            <img src="/images/cart.png" alt="" width="30" />
+            <RiShoppingCartLine size={26} color="white" />
+
             {cartItems.length > 0 && (
-              <div className="absolute bg-[#FA6A02] text-white fredoka text-sm rounded-full w-[20px] h-[20px] flex items-center justify-center right-[-8px] top-[-4px]">
+              <div className="absolute bg-[#FA6A02] text-white fredoka text-sm rounded-full w-[20px] h-[20px] flex items-center justify-center right-[-4px] top-[-7px]">
                 {cartItems.length}
               </div>
             )}
@@ -168,7 +176,7 @@ const Header = () => {
                   setLoginNav((prev) => !prev);
                 }}
               >
-                <img src="/images/profile.png" alt="" width="30" />
+                <FaRegUserCircle size={26} color="white" />
               </div>
               {loginNav && (
                 <div>

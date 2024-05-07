@@ -13,27 +13,27 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const slides = [
   {
     id: 1,
-    image: "/images/slide1.webp",
+    image: "/images/slides/1.webp",
   },
   {
     id: 2,
-    image: "/images/slide2.webp",
+    image: "/images/slides/2.webp",
   },
   {
     id: 3,
-    image: "/images/slide3.webp",
+    image: "/images/slides/3.webp",
   },
   {
     id: 4,
-    image: "/images/slide4.webp",
+    image: "/images/slides/4.webp",
   },
   {
     id: 5,
-    image: "/images/slide5.webp",
+    image: "/images/slides/5.webp",
   },
   {
     id: 6,
-    image: "/images/slide6.webp",
+    image: "/images/slides/6.webp",
   },
 ];
 
@@ -59,7 +59,7 @@ const Featured = () => {
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={slide.id}>
-          <img src={slide.image} alt="" className="w-full" />
+          <img src={slide.image} alt="" className="w-full" loading="lazy" />
         </SwiperSlide>
       ))}
     </Swiper>

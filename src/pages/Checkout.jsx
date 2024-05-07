@@ -105,14 +105,26 @@ const Checkout = () => {
                   onClick={toggleTracking}
                 >
                   <div className="flex items-center  gap-3">
-                    <img src="/images/car.png" alt="" />
+                    <img src="/images/icons/car.webp" alt="" loading="lazy" />
                     <h1 className="outfit font-bold text-lg ">
                       Track your order
                     </h1>
                   </div>
 
                   {isTrackingOpen ? (
-                    <img src="/images/up.png" />
+                    <svg
+                      width="21"
+                      height="15"
+                      viewBox="0 0 21 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1016 12.8228L10.6891 2.99503L2.10522 13.1752"
+                        stroke="black"
+                        stroke-width="3"
+                      />
+                    </svg>
                   ) : (
                     <svg
                       width="21"
@@ -150,7 +162,11 @@ const Checkout = () => {
                           <span className="text-[#8A7A7A]">{currentTime}</span>
                         </div>
                       </div>
-                      <img src="/images/track.png" alt="" />
+                      <img
+                        src="/images/icons/track.webp"
+                        loading="lazy"
+                        alt=""
+                      />
                       <div className="flex-col flex gap-2 ">
                         <div className="flex  flex-col  ">
                           <h1 className="font-semibold outfit">
@@ -181,7 +197,7 @@ const Checkout = () => {
         </div>
       ) : (
         <div className="h-[60vh] flex flex-col items-center justify-center">
-          <img src="/images/emptycart.png" alt="" />
+          <img src="/images/icons/emptycart.webp" alt="" loading="lazy" />
           <h1 className="outfit text-3xl mt-6 font-semibold">
             Your Cart is Empty
           </h1>
