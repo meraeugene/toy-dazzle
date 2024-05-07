@@ -122,7 +122,7 @@ const Checkout = () => {
                       <path
                         d="M19.1016 12.8228L10.6891 2.99503L2.10522 13.1752"
                         stroke="black"
-                        stroke-width="3"
+                        strokeWidth="3"
                       />
                     </svg>
                   ) : (
