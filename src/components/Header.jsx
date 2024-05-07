@@ -84,6 +84,7 @@ const Header = () => {
   const logout = () => {
     localStorage.clear("users");
     setLoading(false);
+    setLoginNav(false);
   };
 
   const cartItems = useSelector((state) => state.cart.cartItems);
