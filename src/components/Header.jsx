@@ -123,9 +123,10 @@ const Header = () => {
       }
 
       // If documents are returned, proceed to send the password reset link
-      await sendPasswordResetEmail(auth, data.email, {
-        url: "https://toy-dazzle.vercel.app/",
-      });
+      await sendPasswordResetEmail(auth, data.email);
+      // await sendPasswordResetEmail(auth, data.email, {
+      //   url: "https://toy-dazzle.vercel.app/",
+      // });
       toast.success(
         "A password reset link has been sent to your email address."
       );
