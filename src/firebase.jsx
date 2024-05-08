@@ -5,12 +5,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAJL6ePiv4EdzpqfJOe61erF69QApe7hXE",
-  authDomain: "toy-dazzle.firebaseapp.com",
-  projectId: "toy-dazzle",
-  storageBucket: "toy-dazzle.appspot.com",
-  messagingSenderId: "138489724000",
-  appId: "1:138489724000:web:79cdeb8aa92a2e3ece1705",
+  apiKey: "AIzaSyBu7RkCtTADmy1pr50P_9QzonL7zwdCv8U",
+  authDomain: "toy-dazzle-6786f.firebaseapp.com",
+  projectId: "toy-dazzle-6786f",
+  storageBucket: "toy-dazzle-6786f.appspot.com",
+  messagingSenderId: "15426773303",
+  appId: "1:15426773303:web:e8e54e079636d87684fab2",
 };
 
 // Initialize Firebase

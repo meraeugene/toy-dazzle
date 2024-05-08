@@ -3,21 +3,27 @@ import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 
 const Checkout = () => {
+  // Selecting cart items and other data from Redux store
   const cartItems = useSelector((state) => state.cart.cartItems);
-
   const { totalPrice } = useSelector((state) => state.cart);
 
+  // Use location to get the mop information
   const location = useLocation();
   const mop = new URLSearchParams(location.search).get("mop");
 
+  // State for the tracking content
   const [isTrackingOpen, setIsTrackingOpen] = useState(false);
+
+  // State for toggling the tracking component
   const toggleTracking = () => {
     setIsTrackingOpen(!isTrackingOpen);
   };
 
+  // State for current time and date
   const [currentDate, setCurrentDate] = useState("");
   const [currentTime, setCurrentTime] = useState("");
 
+  // Use effect for checking the date and time now for updating the state
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();

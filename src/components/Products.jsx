@@ -62,6 +62,7 @@ const Products = ({ title, data }) => {
           },
         }}
       >
+        {/* Map over the data array and render each product as a SwiperSlide */}
         {data.map((product) => (
           <SwiperSlide key={product.id}>
             <ProductCard product={product} />

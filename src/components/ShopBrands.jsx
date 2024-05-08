@@ -8,6 +8,7 @@ const ShopBrands = () => {
         Shop Brands
       </h1>
       <div className="grid grid-cols-6  gap-4">
+        {/* Map over the shopBrands data and render each brand logo */}
         {shopBrands.map((brand) => (
           <div key={brand.id}>
             <img src={brand.image} alt="" className="w-full" loading="lazy" />

@@ -6,11 +6,12 @@ import { useDispatch } from "react-redux";
 
 const ProductCard = ({ product }) => {
   const handleClick = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // Scroll to the top of the page when clicked
   };
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); // Initialize useDispatch hook to dispatch actions
 
+  // Function to add item to cart
   const addCart = (item, quantity = 1) => {
     // Default quantity to 1 if not provided
     dispatch(
@@ -19,11 +20,12 @@ const ProductCard = ({ product }) => {
         quantity,
       })
     );
+    // Display success toast notification
     toast.success(`${quantity} ${item.name} added to cart`);
   };
 
   return (
-    <div className="border lg:h-[400px] xl:h-[450px]  2xl:h-[600px] pb-8 pt-0  px-4 flex flex-col gap-2 relative">
+    <div className="border pb-8 pt-0  lg:h-[450px]   2xl:h-[600px] px-4 flex flex-col gap-2 relative">
       <h1 className="absolute right-[20px] top-0">
         <img
           src="/images/icons/productlogo.webp"

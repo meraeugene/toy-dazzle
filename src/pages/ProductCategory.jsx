@@ -4,6 +4,7 @@ import { categoriesBanner, products } from "../data/products";
 import { useParams } from "react-router-dom";
 
 const ProductCategory = () => {
+  // Get the category parameter from url
   const { category } = useParams();
 
   // Filter products based on the category

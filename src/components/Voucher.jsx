@@ -1,5 +1,6 @@
 import React from "react";
 
+// Array containing voucher data
 const vouchers = [
   {
     id: 1122,
@@ -22,6 +23,7 @@ const Voucher = () => {
         Voucher
       </h1>
       <div className="flex items-center justify-between lg:gap-6">
+        {/* Map over the vouchers array and render each voucher image */}
         {vouchers.map((voucher) => (
           <div key={voucher.id}>
             <img

@@ -14,8 +14,8 @@ const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  // Selecting cart items and other data from Redux store
   const cartItems = useSelector((state) => state.cart.cartItems);
-
   const { itemsPrice, subtotal, shippingPrice, totalPrice } = useSelector(
     (state) => state.cart
   );
@@ -26,30 +26,37 @@ const Cart = () => {
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
-
+  // Function to remove item from cart
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart({ id }));
   };
 
+  // Function to increase quantity of an item in cart
   const increaseQuantityHandler = (id) => {
     dispatch(increaseQuantity({ id }));
   };
 
+  // Function to decrease quantity of an item in cart
   const decreaseQuantityHandler = (id) => {
     dispatch(decreaseQuantity({ id }));
   };
 
+  // Function to edit quantity of an item in cart
   const toggleEditQuantityHandler = (id) => {
     dispatch(toggleEditQuantity({ id }));
   };
 
+  // Function to checkout
   const handleCheckoutHandler = () => {
+    // If no selected option , toast an error
     if (!selectedOption) {
       return toast.error("Please select payment option");
     } else if (selectedOption === "Gcash") {
+      // If gcash is selected, toast an error
       return toast.error("Gcash is not available");
     }
 
+    // If correct option is selected , redirect to /checkout page with mop information
     navigate(`/checkout?mop=${selectedOption}`);
   };
 

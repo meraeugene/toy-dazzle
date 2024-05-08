@@ -8,10 +8,12 @@ import Products from "../components/Products";
 import ShopBrands from "../components/ShopBrands";
 
 const Home = () => {
+  // Filter out the best seller products using the tag
   const bestSellers = products.filter(
     (product) => product.tag && product.tag.includes("Best Seller")
   );
 
+  // Filter out the new arrivals products using the tag
   const newArrivals = products.filter(
     (product) => product.tag && product.tag.includes("New Arrivals")
   );

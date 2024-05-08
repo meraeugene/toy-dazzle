@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth, fireDB } from "../firebase";
 import { toast } from "react-toastify";
 import { Timestamp, addDoc, collection } from "firebase/firestore";
 import { useForm } from "react-hook-form";
+import { BiShowAlt, BiSolidShow } from "react-icons/bi";
 
 const Signup = () => {
   // navigate
   const navigate = useNavigate();
 
+  // Use react hoook form
   const {
     register,
     handleSubmit,
@@ -52,6 +54,23 @@ const Signup = () => {
       console.log(error);
     }
   };
+
+  const [showPassword, setShowPassword] = useState(false); // State to manage password visibility
+
+  // Function to toggle password visibility
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  // Check if the user is logged in by retrieving user data from localStorage
+  const isLoggedIn = JSON.parse(localStorage.getItem("users"));
+
+  // Check if the user is loggedin and if yes, redirect to home page.
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate("/");
+    }
+  }, [navigate, isLoggedIn]);
 
   return (
     <main className="bg-[#FFD72D] lg:p-16 lg:py-16 xl:px-40 ">
@@ -159,9 +178,9 @@ const Signup = () => {
               )}
             </div>
 
-            <div>
+            <div className="relative">
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 autoComplete="off"
                 className={`${
@@ -177,6 +196,16 @@ const Signup = () => {
                   },
                 })}
               />
+              <div
+                className="absolute top-1/2 transform -translate-y-1/2 right-3"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? (
+                  <BiShowAlt fontSize={24} className="cursor-pointer" />
+                ) : (
+                  <BiSolidShow fontSize={24} className="cursor-pointer" />
+                )}
+              </div>
               {errors.password && (
                 <div className="text-red-500 font-bold mt-2">
                   {errors.password.message}

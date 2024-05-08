@@ -1,19 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { updateCart } from "../utils/cartUtils";
 
+// Define the initial state of the cart, retrieving it from localStorage if available
 const initialState = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : { cartItems: [], shippingInformation: {}, paymentMethod: "COD" };
 
 export const cartSlice = createSlice({
-  name: "cart",
-  initialState,
+  name: "cart", // Specify the name of the slice
+  initialState, // Set the initial state
   reducers: {
+    // Reducer for adding items to the cart
     addToCart(state, action) {
+      // Retrieve the new item from the action payload
       const newItem = action.payload;
+      // Check if the item is already in the cart
       const existingItem = state.cartItems.find(
         (item) => item.id === newItem.id
       );
+      // If the item exists, update its quantity and price
       if (existingItem) {
         // If the item with the same ID , update its quantity
         state.cartItems = state.cartItems.map((item) =>
@@ -26,6 +31,7 @@ export const cartSlice = createSlice({
             : item
         );
       } else {
+        // If the item is not in the cart, add it with quantity and price
         state.cartItems = [
           ...state.cartItems,
           {
@@ -36,8 +42,10 @@ export const cartSlice = createSlice({
         ];
       }
 
+      // Update the cart after modifying the items
       return updateCart(state);
     },
+    // Reducer for increasing item quantity in the cart
     increaseQuantity(state, action) {
       const { id } = action.payload;
       state.cartItems = state.cartItems.map((item) =>
@@ -51,6 +59,7 @@ export const cartSlice = createSlice({
       );
       return updateCart(state);
     },
+    // Reducer for decreasing item quantity in the cart
     decreaseQuantity(state, action) {
       const { id } = action.payload;
       state.cartItems = state.cartItems.map((item) =>
@@ -64,6 +73,7 @@ export const cartSlice = createSlice({
       );
       return updateCart(state);
     },
+    // Reducer for toggling edit mode for item quantity in the cart
     toggleEditQuantity(state, action) {
       const { id } = action.payload;
       state.cartItems = state.cartItems.map((item) =>
@@ -75,6 +85,7 @@ export const cartSlice = createSlice({
           : item
       );
     },
+    // Reducer for removing an item from the cart
     removeFromCart: (state, action) => {
       const { id } = action.payload;
       state.cartItems = state.cartItems.filter((item) => !(item.id === id));
@@ -92,40 +103,15 @@ export const cartSlice = createSlice({
         updateCart(state);
       }
     },
-    saveShippingInformation: (state, action) => {
-      state.shippingInformation = {
-        ...state.shippingInformation,
-        ...action.payload,
-      };
-      return updateCart(state);
-    },
-    savePaymentMethod: (state, action) => {
-      state.paymentMethod = action.payload;
-      return updateCart(state);
-    },
-    clearCartItems: (state) => {
-      state.cartItems = [];
-      state.itemsPrice = null;
-      state.shippingPrice = null;
-      state.totalPrice = null;
-      state.taxPrice = null;
-      localStorage.removeItem("cart");
-    },
-    resetCart: (state) => (state = initialState),
   },
 });
 
 // Action creators are generated for each case reducer function
 export const {
   addToCart,
-  deleteFromCart,
+  removeFromCart,
   increaseQuantity,
   decreaseQuantity,
-  removeFromCart,
-  savePaymentMethod,
-  saveShippingInformation,
-  resetCart,
-  clearCartItems,
   toggleEditQuantity,
 } = cartSlice.actions;
 

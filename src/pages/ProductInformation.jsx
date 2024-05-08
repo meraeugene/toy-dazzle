@@ -7,9 +7,11 @@ import { addToCart } from "../redux/cartSlice";
 import { toast } from "react-toastify";
 
 const ProductInformation = () => {
+  // Get the product id using location.search
   const location = useLocation();
   const productId = new URLSearchParams(location.search).get("id");
 
+  // Find the single product from the products data base on the productId from the url
   const singleProduct = products.find(
     (product) => product.id === parseInt(productId)
   );
@@ -18,6 +20,7 @@ const ProductInformation = () => {
 
   const dispatch = useDispatch();
 
+  // Function to adding the product to the cart
   const addCart = (item) => {
     dispatch(
       addToCart({
@@ -28,10 +31,12 @@ const ProductInformation = () => {
     toast.success(`${quantity} ${item.name} added to cart`);
   };
 
+  // Function to increase the quantity of the product
   const handleIncrement = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };
 
+  // Function to decrease the quantity of the product
   const handleDecrement = () => {
     if (quantity > 1) {
       setQuantity((prevQuantity) => prevQuantity - 1);
