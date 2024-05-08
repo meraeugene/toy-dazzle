@@ -362,33 +362,38 @@ const Header = () => {
                           </div>
                         )}
                       </div>
-                      <div className="relative">
-                        <input
-                          type={showPassword ? "text" : "password"}
-                          placeholder="Password"
-                          className={`${
-                            errors.password ? "border-[2px] border-red-500" : ""
-                          } border w-full border-[#FA6A02] px-4 rounded-2xl py-3 `}
-                          {...register("password", {
-                            required: "Password is required",
-                          })}
-                        />
-                        <div
-                          className="absolute top-1/2 transform -translate-y-1/2 right-3"
-                          onClick={togglePasswordVisibility}
-                        >
-                          {showPassword ? (
-                            <BiShowAlt
-                              fontSize={24}
-                              className="cursor-pointer"
-                            />
-                          ) : (
-                            <BiSolidShow
-                              fontSize={24}
-                              className="cursor-pointer"
-                            />
-                          )}
+                      <div>
+                        <div className="relative">
+                          <input
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Password"
+                            className={`${
+                              errors.password
+                                ? "border-[2px] border-red-500"
+                                : ""
+                            } border w-full border-[#FA6A02] px-4 rounded-2xl py-3 `}
+                            {...register("password", {
+                              required: "Password is required",
+                            })}
+                          />
+                          <div
+                            className="absolute top-1/2 transform -translate-y-1/2 right-3"
+                            onClick={togglePasswordVisibility}
+                          >
+                            {showPassword ? (
+                              <BiShowAlt
+                                fontSize={24}
+                                className="cursor-pointer"
+                              />
+                            ) : (
+                              <BiSolidShow
+                                fontSize={24}
+                                className="cursor-pointer"
+                              />
+                            )}
+                          </div>
                         </div>
+
                         {errors.password && (
                           <div className="text-red-500 font-bold mt-2">
                             {errors.password.message}

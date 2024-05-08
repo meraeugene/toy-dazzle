@@ -178,34 +178,37 @@ const Signup = () => {
               )}
             </div>
 
-            <div className="relative">
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Password"
-                autoComplete="off"
-                className={`${
-                  errors.password ? "border-[2px] border-red-500" : ""
-                } border border-[#FA6A02] rounded-2xl py-4 px-4 text-gray-600 text-xl font-semibold w-full `}
-                {...register("password", {
-                  required: "Password is required",
-                  pattern: {
-                    value:
-                      /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/,
-                    message:
-                      "Password must be at least 6 characters with one special character, one digit, and one capital letter.",
-                  },
-                })}
-              />
-              <div
-                className="absolute top-1/2 transform -translate-y-1/2 right-3"
-                onClick={togglePasswordVisibility}
-              >
-                {showPassword ? (
-                  <BiShowAlt fontSize={24} className="cursor-pointer" />
-                ) : (
-                  <BiSolidShow fontSize={24} className="cursor-pointer" />
-                )}
+            <div>
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  autoComplete="off"
+                  className={`${
+                    errors.password ? "border-[2px] border-red-500" : ""
+                  } border border-[#FA6A02] rounded-2xl py-4 px-4 text-gray-600 text-xl font-semibold w-full  `}
+                  {...register("password", {
+                    required: "Password is required",
+                    pattern: {
+                      value:
+                        /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/,
+                      message:
+                        "Password must be at least 6 characters with one special character, one digit, and one capital letter.",
+                    },
+                  })}
+                />
+                <div
+                  className="absolute top-1/2 transform -translate-y-1/2 right-3"
+                  onClick={togglePasswordVisibility}
+                >
+                  {showPassword ? (
+                    <BiShowAlt fontSize={24} className="cursor-pointer" />
+                  ) : (
+                    <BiSolidShow fontSize={24} className="cursor-pointer" />
+                  )}
+                </div>
               </div>
+
               {errors.password && (
                 <div className="text-red-500 font-bold mt-2">
                   {errors.password.message}
