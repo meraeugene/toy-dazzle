@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="border pb-8 pt-0  lg:h-[450px]   2xl:h-[600px] px-4 flex flex-col gap-2 relative">
+    <div className="border pb-8 pt-0  lg:h-[450px] xl:h-[500px]   2xl:h-[600px] px-4 flex flex-col gap-2 relative">
       <h1 className="absolute right-[20px] top-0">
         <img
           src="/images/icons/productlogo.webp"
